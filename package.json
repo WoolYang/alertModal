@@ -1,0 +1,20 @@
+{
+	"name": "alertmodal",
+	"version": "1.0.0",
+	"description": "alertmodal",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "wool",
+	"license": "MIT",
+	"devDependencies": {
+		"babel-core": "6.4.5",
+		"babel-preset-es2015": "6.3.13",
+		"css-loader": "^0.23.1",
+		"style-loader": "^0.13.1",
+		"url-loader": "^0.5.7",
+		"webpack": "2.2.0",
+		"webpack-dev-server": "2.2.0",
+	}
+}

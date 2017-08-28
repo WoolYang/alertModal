@@ -1,0 +1,68 @@
+.alertView_group {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: table;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    opacity:1;
+    transition: opacity 2s 
+}
+
+.alertView_warp {
+    display: table-cell;
+    vertical-align: middle;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.alertView {
+    position: relative;
+    background-color: #fff;
+    margin: 0 auto;
+    border-radius: 4px;
+    width: 300px;
+    min-height: 126px;
+}
+
+.alertView_close {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    font-size: 20px;
+    cursor: pointer;
+    color:#c1c1c1;
+}
+
+.alertView_success {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 60px;
+    margin: auto;
+    font-size:40px;
+    color: #008000;
+}
+
+.alertView_fail {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 60px;
+    margin: auto;
+    font-size:40px;
+    color: #ff0000;
+}
+
+.alertView_content {
+    padding: 56px 60px 56px 106px;
+    font-size: 14px !important;
+    color: #333 !important;
+    word-break: break-all;
+}
