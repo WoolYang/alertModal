@@ -1,0 +1,8 @@
+{
+  "presets": ["es2015"],
+  "env": {
+    "dev": {
+      "presets": ["react-hmre"]
+    }
+  }
+}
