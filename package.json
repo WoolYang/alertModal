@@ -1,29 +1,29 @@
 {
-	"name": "alertmodal",
-	"version": "1.0.3",
-	"description": "alertModal",
-	"main": "dist/alertModal.min.js",
-	"scripts": {
-		"build": "npm version patch && cross-env NODE_ENV=production webpack --progress --hide-modules && npm publish"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/WoolYang/alertModal.git"
-	},
-	"author": "Yang",
-	"license": "MIT",
-	"devDependencies": {
-		"babel-core": "6.4.5",
-		"babel-loader": "6.2.7",
-		"babel-plugin-transform-runtime": "^6.15.0",
-		"babel-preset-es2015": "6.3.13",
-		"babel-preset-stage-2": "^6.13.0",
-		"babel-runtime": "^6.11.6",
-		"cross-env": "^3.0.0",
-		"css-loader": "^0.23.1",
-		"style-loader": "^0.13.1",
-		"file-loader": "0.9.0",
-		"webpack": "2.2.0",
-		"webpack-dev-server": "2.2.0"
-	}
+  "name": "alertmodal",
+  "version": "1.0.4",
+  "description": "alertModal",
+  "main": "dist/alertModal.min.js",
+  "scripts": {
+    "build": "npm version patch && cross-env NODE_ENV=production webpack --progress --hide-modules && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WoolYang/alertModal.git"
+  },
+  "author": "Yang",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "6.4.5",
+    "babel-loader": "6.2.7",
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-preset-es2015": "6.3.13",
+    "babel-preset-stage-2": "^6.13.0",
+    "babel-runtime": "^6.11.6",
+    "cross-env": "^3.0.0",
+    "css-loader": "^0.23.1",
+    "style-loader": "^0.13.1",
+    "file-loader": "0.9.0",
+    "webpack": "2.2.0",
+    "webpack-dev-server": "2.2.0"
+  }
 }
