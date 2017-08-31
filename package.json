@@ -2,19 +2,21 @@
 	"name": "alertmodal",
 	"version": "1.0.0",
 	"description": "alertmodal",
-	"main": "index.js",
+	"main": "./dist/alertModal.min.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"transform": "babel ./src/alertModal.js -o ./src/alertModal1.js --presets es2015",
+		"compress": "uglifyjs ./src/alertModal1.js -o ./dist/alertModal.min.js",
+		"clean": "rimraf ./src/alertModal1.js",
+		"build": "npm version patch && npm run transform && npm run compress && npm run clean && npm publish"
 	},
 	"author": "wool",
 	"license": "MIT",
 	"devDependencies": {
+		"babel-cli": "^6.26.0",
 		"babel-core": "6.4.5",
 		"babel-preset-es2015": "6.3.13",
-		"css-loader": "^0.23.1",
-		"style-loader": "^0.13.1",
-		"url-loader": "^0.5.7",
-		"webpack": "2.2.0",
-		"webpack-dev-server": "2.2.0",
+		"babel-preset-react": "^6.3.13",
+		"babel-preset-react-hmre": "^1.1.0"
 	}
 }
