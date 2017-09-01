@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>alert</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="alert">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+    <body>
+    	<div class = 'header'></div>
+        <button id ='test'>click here</button>
+        <script type="text/javascript" src="alertModal.min.js" ></script>
+        <script type="text/javascript">
+            document.getElementById('test').addEventListener("click", () => {
+                    window.alertModal({
+                        msg: 'This is a test!',
+                        status: 'success'
+                    });
+            });
+        </script>
+    </body>	
+</html>
