@@ -29,5 +29,9 @@ a pop-up plugin by JavaScript
 
 # API
 
-	msg : alert message
-	status : icon status ['fail'|'success'|'your custom icon class']
+	msg : alert message    				default : ''
+	status : icon status ['fail'|'success'|'your custom icon class']  			default : success
+	time : fadeout time  				default : 2000
+	autoClose : if autoclose  			default : true
+	delayTime : autoclose time			default : 2000
+ 

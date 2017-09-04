@@ -1,15 +1,26 @@
-const alertModal = (obj) => {
-
-    let idIndex = document.querySelector(".alertView") === null ? 0 : document.querySelector(".alertView").length,
+const alertModal = (options) => {
+    let settings = {
+            status: 'success',
+            msg: '',
+            time: 2000,
+            autoClose: true,
+            delayTime: 2000
+        },
+        idIndex = document.querySelector(".alertView") === null ? 0 : document.querySelector(".alertView").length,
         id = 'alertView_modal_id_' + idIndex,
         warning = '';
 
-    if (obj.status == 'success') {
+
+    let hasOwnProperty = Object.prototype.hasOwnProperty;
+
+    settings = assign(settings, options);
+
+    if (settings.status == 'success') {
         warning = `<div class="alertView_success icon-check_alt"></div>`
-    } else if (obj.status == 'fail') {
+    } else if (settings.status == 'fail') {
         warning = `<div class="alertView_fail icon-x_alt"></div>`
     } else {
-        warning = `<div class="alertView_custom ${obj.status}"></div>`
+        warning = `<div class="alertView_custom ${settings.status}"></div>`
     }
 
     let view = `<div class="alertView_group">   
@@ -17,7 +28,7 @@ const alertModal = (obj) => {
                         <div class="alertView">
                             <div class="alertView_close icon-x"></div>
                             ${!!warning && warning}
-                            <div class="alertView_content">${obj.msg}</div>
+                            <div class="alertView_content">${settings.msg}</div>
                         </div>
                     </div>
                 </div>`;
@@ -31,7 +42,7 @@ const alertModal = (obj) => {
     let domId = document.getElementById(id);
     //关闭弹框
     let close = () => {
-        fadeOut(domId, obj.time || 2000, function() {
+        fadeOut(domId, settings.time || 2000, function() {
             if (domId.parentNode !== null) {
                 document.querySelector(`#${id} .alertView_close`).removeEventListener("click", () => {
                     close();
@@ -45,15 +56,31 @@ const alertModal = (obj) => {
         close();
     });
 
-    setTimeout(() => {
-        close()
-    }, obj.time || 2000);
+    if (settings.autoClose) {
+        setTimeout(() => {
+            close()
+        }, settings.delayTime || 2000);
+    }
+
 
     //淡出效果
     function fadeOut(el, time, callback) {
         el.childNodes[0].style.transition = `opacity ${time/1000}s `;
         el.childNodes[0].style.opacity = 0;
         setTimeout(callback, time - 10)
+    }
+
+    //对象拷贝
+    function assign(target) {
+        for (var i = 1; i < arguments.length; i++) {
+            var source = arguments[i]
+            for (var key in source) {
+                if (hasOwnProperty.call(source, key)) {
+                    target[key] = source[key]
+                }
+            }
+        }
+        return target
     }
 };
 
