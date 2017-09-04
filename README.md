@@ -29,5 +29,5 @@ a pop-up plugin by JavaScript
 
 # API
 
-	**msg**  alert message
-	**status**  icon status ['fail'|'success']
+	msg : alert message
+	status : icon status ['fail'|'success'|'your custom icon class']

@@ -60,6 +60,17 @@
     color: #ff0000;
 }
 
+.alertView_custom {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 60px;
+    margin: auto;
+    font-size:40px;
+}
+
 .alertView_content {
     padding: 56px 60px 56px 106px;
     font-size: 14px !important;

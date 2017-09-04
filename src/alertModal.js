@@ -2,10 +2,17 @@ const alertModal = (obj) => {
 
     let idIndex = document.querySelector(".alertView") === null ? 0 : document.querySelector(".alertView").length,
         id = 'alertView_modal_id_' + idIndex,
-        warning = obj.status == 'success' ?
-        `<div class="alertView_success icon-check_alt"></div>` :
-        `<div class="alertView_fail icon-x_alt"></div>`,
-        view = `<div class="alertView_group">   
+        let warning = '';
+
+    if (obj.status == 'success') {
+        warning = `<div class="alertView_success icon-check_alt"></div>`
+    } else if (obj.status == 'fail') {
+        warning = `<div class="alertView_fail icon-x_alt"></div>`
+    } else {
+        warning = `<div class="alertView_custom ${obj.status}"></div>`
+    }
+
+    let view = `<div class="alertView_group">   
                     <div class="alertView_warp">
                         <div class="alertView">
                             <div class="alertView_close icon-x"></div>
