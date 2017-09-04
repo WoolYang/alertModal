@@ -2,7 +2,7 @@ const alertModal = (obj) => {
 
     let idIndex = document.querySelector(".alertView") === null ? 0 : document.querySelector(".alertView").length,
         id = 'alertView_modal_id_' + idIndex,
-        let warning = '';
+        warning = '';
 
     if (obj.status == 'success') {
         warning = `<div class="alertView_success icon-check_alt"></div>`
