@@ -1,6 +1,6 @@
 {
   "name": "alertmodal",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "alertModal",
   "main": "dist/alertModal.min.js",
   "scripts": {
