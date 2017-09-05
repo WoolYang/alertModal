@@ -1,5 +1,17 @@
 # alertModal
-a pop-up plugin by JavaScript
+a pop-up plugin by Native JavaScript
+
+
+AlertModal a pop-up plugin by Native JavaScript, you can use in React, Vue and other frameworks;
+
+
+# support
+* √ ie11
+* √ edge 12+
+* √ firefox 4+
+* √ chrome 26+
+* √ safari 5+
+* √ opera 15+
 
 # install
 
