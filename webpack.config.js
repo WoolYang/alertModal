@@ -8,7 +8,7 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, './dist'),
-    publicPath: '/dist/',
+    // publicPath: '/dist/',
     filename: 'alertModal.min.js',
     library: 'AlertModal',
     libraryTarget: 'umd',
@@ -24,7 +24,7 @@ module.exports = {
       loader: 'style-loader!css-loader'
     }, {
       test: /\.(svg|ttf|eot|svg|woff(\(?2\)?)?)(\?[a-zA-Z_0-9.=&]*)?(#[a-zA-Z_0-9.=&]*)?$/,
-      loader: "file-loader?name=fonts/[name].[ext]"
+      loader: "file-loader?name=./fonts/[name].[ext]"
     }]
   },
   performance: {
