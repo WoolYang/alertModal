@@ -2,7 +2,7 @@
 a pop-up plugin by Native JavaScript
 
 
-AlertModal a pop-up plugin by Native JavaScript, you can use in React, Vue and other frameworks;
+AlertModal is a pop-up plugin by Native JavaScript, you can use in React, Vue and other frameworks;
 
 
 # support
