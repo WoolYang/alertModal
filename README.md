@@ -41,9 +41,9 @@ AlertModal is a pop-up plugin by Native JavaScript, you can use in React, Vue an
 
 # API
 
-	msg : alert message    				default : ''
+	msg : alert message    														default : ''
 	status : icon status ['fail'|'success'|'your custom icon class']  			default : success
-	time : fadeout time  				default : 2000
-	autoClose : if autoclose  			default : true
-	delayTime : autoclose time			default : 2000
+	time : fadeout time  														default : 2000
+	autoClose : if autoclose  													default : true
+	delayTime : autoclose time													default : 2000
  
